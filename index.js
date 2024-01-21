@@ -10,6 +10,7 @@ const PORT =  process.env.PORT || 8000;
 app.use(cors());
 app.use(express.json())
 
+app.use("/",(req,res) => {res.json({"message":"hi"})});
 
 app.use("/api/products",productRoute);
 app.use("/api/checkout",checkOut);
